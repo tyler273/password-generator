@@ -7,6 +7,7 @@ var special = ["!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","
 var minpasswordlength = 8;
 var maxpasswordlength = 128;
 var pool = [];
+var password = [];
 
 
 function generatePassword() {
@@ -23,13 +24,13 @@ function generatePassword() {
     generatePassword();
   }
 
-  var confirmuppercase = confirm ("Would you like your password to contain uppercase letters?");
+  var confirmuppercase = confirm ("Would you like your password to contain uppercase letters? \n (OK = yes, Cancel = no)");
   console.log(confirmuppercase, "Confirm uppercase");
-  var confirmlowercase = confirm ("Would you like your password to contain lowercase letters?");
+  var confirmlowercase = confirm ("Would you like your password to contain lowercase letters? \n (OK = yes, Cancel = no)");
   console.log(confirmlowercase, "Confirm lowercase");
-  var confirmnumbers = confirm ("Would you like your password to contain numbers?");
+  var confirmnumbers = confirm ("Would you like your password to contain numbers? \n (OK = yes, Cancel = no)");
   console.log(confirmnumbers, "Confirm numbers");
-  var confirmspecial = confirm ("Would you like your password to contain special characters?");
+  var confirmspecial = confirm ("Would you like your password to contain special characters? \n (OK = yes, Cancel = no)");
   console.log(confirmspecial, "Confirm special characters");
   // if(confirmuppercase)
 
@@ -56,6 +57,12 @@ function generatePassword() {
     pool = pool.concat(special)
     console.log("After ",pool)
   }
+  
+  for(var i = 0; i < numberOfCharacters; i++){
+    // console.log(pool[Math.floor(Math.random() * pool.length)]);
+    password.push(pool[Math.floor(Math.random() * pool.length)]);
+  }
+  return password.join('')
 }
 // generatePassword()
 
