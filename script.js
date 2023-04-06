@@ -7,35 +7,58 @@ var special = ["!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","
 var minpasswordlength = 8;
 var maxpasswordlength = 128;
 var pool = [];
-pool = pool.concat(lowercase, uppercase, numbers, special);
+
 
 function generatePassword() {
   var numberOfCharacters = parseInt(prompt("How long do you want your password to be? (Must include a minimum of 8 characters to a maximum of 128 characters.)"));
-  
-  if(numberOfCharacters){
-    if (password < minpasswordlength || password > maxpasswordlength);
+  console.log(numberOfCharacters);
+  if(!numberOfCharacters){
+   window.alert("Please enter a number of desired characters");
+   return
   }
   
-  
-  
+  if (numberOfCharacters < 8 || numberOfCharacters > 128){
+    console.log("Bad password");
+    window.alert("Not a valid amount of characters. Please pick between 8 and 128 characters for your password.");
+    generatePassword();
+  }
+
   var confirmuppercase = confirm ("Would you like your password to contain uppercase letters?");
-  
-  
-  
-  
-  
-  // console.log(typeof numberOfCharacters);
-  for(var i = 0; i < numberOfCharacters; i++){
-    password.push(pool[Math.floor(Math.random() * pool.length)]);
+  console.log(confirmuppercase, "Confirm uppercase");
+  var confirmlowercase = confirm ("Would you like your password to contain lowercase letters?");
+  console.log(confirmlowercase, "Confirm lowercase");
+  var confirmnumbers = confirm ("Would you like your password to contain numbers?");
+  console.log(confirmnumbers, "Confirm numbers");
+  var confirmspecial = confirm ("Would you like your password to contain special characters?");
+  console.log(confirmspecial, "Confirm special characters");
+  // if(confirmuppercase)
+
+  if(confirmuppercase === true){
+    console.log("Before ",pool)
+    pool = pool.concat(uppercase)
+    console.log("After ",pool)
   }
   
-  console.log(password);
-  // prompt("Do you want lowercase letters? Yes/No");
-  // prompt("Do you want uppercase letters? Yes/No");
-  // prompt("Do you want numbers? Yes/No");
-  // prompt("Do you want special characters? Yes/No");
-  // return password.join('-');
+  if(confirmlowercase === true){
+    console.log("Before ",pool)
+    pool = pool.concat(lowercase)
+    console.log("After ",pool)
+  }
+
+  if(confirmnumbers === true){
+    console.log("Before ",pool)
+    pool = pool.concat(numbers)
+    console.log("After ",pool)
+  }
+
+  if(confirmspecial === true){
+    console.log("Before ",pool)
+    pool = pool.concat(special)
+    console.log("After ",pool)
+  }
 }
+// generatePassword()
+
 
 // Write password to the #password input
 function writePassword() {
