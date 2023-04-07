@@ -24,6 +24,8 @@ function generatePassword() {
     generatePassword();
   }
 
+// Confirm prompts for user to select which characters they want in their password
+
   var confirmuppercase = confirm ("Would you like your password to contain uppercase letters? \n (OK = yes, Cancel = no)");
   console.log(confirmuppercase, "Confirm uppercase");
   var confirmlowercase = confirm ("Would you like your password to contain lowercase letters? \n (OK = yes, Cancel = no)");
