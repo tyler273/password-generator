@@ -8,7 +8,7 @@ I was able to complete this assignment and properly code statements thanks to my
 
 ## Usage
 
-<img src="https://github.com/tyler273/horiseon-refactor/blob/main/assets/images/screenshot_1.png" width = "500" />
+<img src="https://github.com/tyler273/password-generator/blob/main/assets/images/livesite.png" width = "500" />
 
 [Click here for repo](https://github.com/tyler273/password-generator)
 
