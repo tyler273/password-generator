@@ -32,7 +32,6 @@ function generatePassword() {
   console.log(confirmnumbers, "Confirm numbers");
   var confirmspecial = confirm ("Would you like your password to contain special characters? \n (OK = yes, Cancel = no)");
   console.log(confirmspecial, "Confirm special characters");
-  // if(confirmuppercase)
 
   if(confirmuppercase === true){
     console.log("Before ",pool)
@@ -64,7 +63,7 @@ function generatePassword() {
   }
   return password.join('')
 }
-// generatePassword()
+
 
 
 // Write password to the #password input
