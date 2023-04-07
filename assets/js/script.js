@@ -33,6 +33,8 @@ function generatePassword() {
   var confirmspecial = confirm ("Would you like your password to contain special characters? \n (OK = yes, Cancel = no)");
   console.log(confirmspecial, "Confirm special characters");
 
+// if statements to pull from arrays
+
   if(confirmuppercase === true){
     console.log("Before ",pool)
     pool = pool.concat(uppercase)
