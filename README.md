@@ -10,7 +10,6 @@ I was able to complete this assignment and properly code statements thanks to my
 
 <img src="https://github.com/tyler273/password-generator/blob/main/images/livesite.png" />
 
-[Click here for repo](https://github.com/tyler273/password-generator)
 
 [Click here for live site](https://tyler273.github.io/password-generator/)
 
